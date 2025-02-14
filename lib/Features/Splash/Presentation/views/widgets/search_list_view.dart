@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 
 import 'list_view_item.dart';
 
-class CustomListView extends StatelessWidget {
-  const CustomListView({super.key});
+class SearchListView extends StatelessWidget {
+  const SearchListView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: 10,
 
-      // shrinkWrap: true,
+      //shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
 
       itemBuilder: (context, index) {

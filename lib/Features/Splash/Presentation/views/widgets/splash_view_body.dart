@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:go_router/go_router.dart';
 
-
 import 'text_animated_widget.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -24,14 +23,10 @@ class _SplashViewBodyState extends State<SplashViewBody>
     navigateToHome();
   }
 
-  
-
-  
   @override
-  void dispose(){
+  void dispose() {
     super.dispose();
-  animationController.dispose();
-
+    animationController.dispose();
   }
 
   @override
@@ -50,18 +45,17 @@ class _SplashViewBodyState extends State<SplashViewBody>
     ));
   }
 
-
-void initSlidingAnimation() {
-     animationController =
+  void initSlidingAnimation() {
+    animationController =
         AnimationController(vsync: this, duration: const Duration(seconds: 1));
     slidingText = Tween<Offset>(begin: const Offset(0, 2), end: Offset.zero)
         .animate(animationController);
-        animationController.forward();
+    animationController.forward();
   }
 
   void navigateToHome() {
-     Future.delayed(const Duration(seconds: 2),(){
+    Future.delayed(const Duration(seconds: 2), () {
       GoRouter.of(context).push('/homeView');
     });
   }
-    }
+}

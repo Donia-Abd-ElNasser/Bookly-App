@@ -6,16 +6,15 @@ class HorizontalContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 2.7/4,
+      aspectRatio: 2.7 / 4,
       child: Container(
         // width: 200,height: 100,
-       decoration: BoxDecoration(
-        color: const Color.fromARGB(31, 227, 224, 224),
-        image: const DecorationImage(image: AssetImage('assets/test_image.png'),
-        fit: BoxFit.fill),
-        borderRadius: BorderRadius.circular(16),
-        
-       ),
+        decoration: BoxDecoration(
+          color: const Color.fromARGB(31, 227, 224, 224),
+          image: const DecorationImage(
+              image: AssetImage('assets/test_image.png'), fit: BoxFit.fill),
+          borderRadius: BorderRadius.circular(16),
+        ),
       ),
     );
   }

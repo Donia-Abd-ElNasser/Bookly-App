@@ -2,7 +2,6 @@ import 'package:booklyapp/core/routes.dart';
 import 'package:booklyapp/costants.dart';
 import 'package:flutter/material.dart';
 
-
 void main() {
   runApp(const BookStore());
 }
@@ -17,10 +16,7 @@ class BookStore extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: kPrimaryColor,
-       
-      
       ),
-      
     );
   }
 }

@@ -9,10 +9,7 @@ class CustomSearchTextField extends StatelessWidget {
     return TextField(
       decoration: InputDecoration(
         focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide(
-            color: Colors.white60
-          )
-        ),
+            borderSide: BorderSide(color: Colors.white60)),
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
             borderSide: const BorderSide(
@@ -26,11 +23,13 @@ class CustomSearchTextField extends StatelessWidget {
           onPressed: () {
             // GoRouter.of(context).push(AppRoutes.kSearchView);
           },
-          icon: const Opacity(opacity: 0.7,
-            child: Icon(FontAwesomeIcons.magnifyingGlass,)),
+          icon: const Opacity(
+              opacity: 0.7,
+              child: Icon(
+                FontAwesomeIcons.magnifyingGlass,
+              )),
         ),
       ),
-     
     );
   }
 }

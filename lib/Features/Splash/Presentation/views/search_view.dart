@@ -1,4 +1,6 @@
 import 'package:booklyapp/Features/Splash/Presentation/views/widgets/custom_text_field.dart';
+import 'package:booklyapp/Features/Splash/Presentation/views/widgets/search_list_view.dart';
+import 'package:booklyapp/Features/Splash/Presentation/views/widgets/search_view_body.dart';
 import 'package:flutter/material.dart';
 
 class SearchView extends StatelessWidget {
@@ -7,17 +9,7 @@ class SearchView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-        body: SafeArea(
-      child: Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.all(16),
-            child: CustomSearchTextField(
-              
-            ),
-          )
-        ],
-      ),
-    ));
+      body: SafeArea(child: SearchViewBody()),
+    );
   }
 }
