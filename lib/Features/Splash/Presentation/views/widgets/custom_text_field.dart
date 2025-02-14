@@ -26,7 +26,8 @@ class CustomSearchTextField extends StatelessWidget {
           onPressed: () {
             // GoRouter.of(context).push(AppRoutes.kSearchView);
           },
-          icon: const Icon(FontAwesomeIcons.magnifyingGlass),
+          icon: const Opacity(opacity: 0.7,
+            child: Icon(FontAwesomeIcons.magnifyingGlass,)),
         ),
       ),
      
