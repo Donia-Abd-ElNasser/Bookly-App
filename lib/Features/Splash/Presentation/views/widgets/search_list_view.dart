@@ -16,7 +16,8 @@ class SearchListView extends StatelessWidget {
       itemBuilder: (context, index) {
         return const Padding(
           padding: EdgeInsets.only(bottom: 10),
-          child: ListViewContainer(),
+          child: //ListViewContainer(),
+          Text('jki')
         );
       },
     );

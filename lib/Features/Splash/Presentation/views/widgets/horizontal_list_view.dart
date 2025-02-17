@@ -1,7 +1,10 @@
 import 'package:booklyapp/Features/Splash/Presentation/manager/featured_book_cubit/featured_book_cubit.dart';
+import 'package:booklyapp/Features/Splash/data/models/book_model/book_model.dart';
 import 'package:booklyapp/core/errors/failure_widget.dart';
+import 'package:booklyapp/core/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 import 'horizontal_widget.dart';
 
@@ -16,11 +19,17 @@ class HorizontalListView extends StatelessWidget {
   return SizedBox(
     height: MediaQuery.of(context).size.height * 0.3,
     child: ListView.builder(
+      physics: const BouncingScrollPhysics(),
+      itemCount: state.books.length,
       scrollDirection: Axis.horizontal,
       itemBuilder: (context, index) {
-        return const Padding(
-          padding: EdgeInsets.only(right: 16),
-          child: HorizontalContainer(),
+        return  Padding(
+          padding: const EdgeInsets.only(right: 16),
+          child: GestureDetector(
+            onTap: (){
+              GoRouter.of(context).push(AppRoutes.kBookDetailsView,extra: state.books[index]);
+            },
+            child: HorizontalContainer(imageUrl: state.books[index].volumeInfo.imageLinks.thumbnail,)),
         );
       },
     ),

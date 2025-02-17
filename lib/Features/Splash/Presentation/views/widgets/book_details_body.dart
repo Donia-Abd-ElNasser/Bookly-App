@@ -4,12 +4,13 @@ import 'package:booklyapp/Features/Splash/Presentation/views/widgets/book_rating
 import 'package:booklyapp/Features/Splash/Presentation/views/widgets/books_buttons_rows.dart';
 import 'package:booklyapp/Features/Splash/Presentation/views/widgets/custom_book_details_appbar.dart';
 import 'package:booklyapp/Features/Splash/Presentation/views/widgets/horizontal_widget.dart';
+import 'package:booklyapp/Features/Splash/data/models/book_model/book_model.dart';
 
 import 'package:flutter/material.dart';
 
 class BookDetailsBody extends StatelessWidget {
-  const BookDetailsBody({super.key});
-
+  const BookDetailsBody({super.key, required this.bookModel});
+final BookModel bookModel;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -17,20 +18,21 @@ class BookDetailsBody extends StatelessWidget {
       child: Column(
         children: [
           const CustomBookDetailsAppBar(),
-          const SizedBox(height: 300, child: HorizontalContainer()),
+           SizedBox(height: 300, child: HorizontalContainer(imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ??'https://dummyimage.com/600x400/ffffff/000000&text=No+Image',)),
           const SizedBox(
             height: 15,
           ),
           Text(
-            'The Jungle Book',
-            style: Styles.textStyle20.copyWith(fontSize: 30),
+           bookModel.volumeInfo.title!,
+            style: Styles.textStyle20.copyWith(fontSize: 23),
+            textAlign: TextAlign.center,
           ),
           Opacity(
             opacity: .7,
             child: Text(
-              'Description',
+               bookModel.volumeInfo.authors?[0]??' ',
               style: Styles.textStyle18.copyWith(
-                  fontSize: 20,
+                  fontSize: 16,
                   fontWeight: FontWeight.normal,
                   fontStyle: FontStyle.italic),
             ),
@@ -41,7 +43,7 @@ class BookDetailsBody extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          const BooksButtonRow(),
+           BooksButtonRow(bookModel: bookModel,),
           const SizedBox(
             height: 15,
           ),
