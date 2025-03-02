@@ -22,7 +22,7 @@ class MayLikeList extends StatelessWidget {
                 return  Padding(
                   padding:const EdgeInsets.only(right: 16, top: 10),
                   child: HorizontalContainer(
-                    imageUrl:state.books[index].volumeInfo.imageLinks?.thumbnail??'https://dummyimage.com/600x400/ffffff/000000&text=No+Image',
+                    imageUrl:state.books[index].volumeInfo.imageLinks.thumbnail??'https://dummyimage.com/600x400/ffffff/000000&text=No+Image',
                   ),
                 );
               }),

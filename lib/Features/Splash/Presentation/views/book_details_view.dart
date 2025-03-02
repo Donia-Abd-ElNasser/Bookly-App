@@ -18,6 +18,7 @@ class _BookDetailsViewState extends State<BookDetailsView> {
         category: widget.bookModel.volumeInfo.categories![0]);
   }
 
+  @override
   Widget build(BuildContext context) {
     return  Scaffold(
         body: SafeArea(

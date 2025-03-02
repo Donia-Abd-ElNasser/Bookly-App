@@ -1,5 +1,4 @@
 import 'package:booklyapp/Features/Splash/Presentation/manager/featured_book_cubit/featured_book_cubit.dart';
-import 'package:booklyapp/Features/Splash/data/models/book_model/book_model.dart';
 import 'package:booklyapp/core/errors/failure_widget.dart';
 import 'package:booklyapp/core/routes.dart';
 import 'package:flutter/material.dart';

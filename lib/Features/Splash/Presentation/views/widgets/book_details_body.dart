@@ -18,7 +18,7 @@ final BookModel bookModel;
       child: Column(
         children: [
           const CustomBookDetailsAppBar(),
-           SizedBox(height: 300, child: HorizontalContainer(imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ??'https://dummyimage.com/600x400/ffffff/000000&text=No+Image',)),
+           SizedBox(height: 300, child: HorizontalContainer(imageUrl: bookModel.volumeInfo.imageLinks.thumbnail ??'https://dummyimage.com/600x400/ffffff/000000&text=No+Image',)),
           const SizedBox(
             height: 15,
           ),
